@@ -13,7 +13,7 @@ LOG_FILE="/dev/null"
 max_points=95
 
 # change this of you want to keep the logs after execution
-DO_CLEANUP=${DO_CLEANUP:-yes}
+DO_CLEANUP=${DO_CLEANUP:-no}
 
 TEST_LIB=_test/test_lib.sh
 CHECK_SKIP='_test/'
