@@ -1,0 +1,185 @@
+==6511== Memcheck, a memory error detector
+==6511== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==6511== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==6511== Command: _test/bin/test_fflush ./_test/work/test_18
+==6511== Parent PID: 6506
+==6511== 
+==6511== Invalid write of size 8
+==6511==    at 0x4E3CC2B: so_fopen (so_stdio.c:57)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511==  Address 0x5634778 is 0 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 8
+==6511==    at 0x4E3CC3C: so_fopen (so_stdio.c:61)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511==  Address 0x5634778 is 0 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid write of size 4
+==6511==    at 0x4E3CC5C: so_fopen (so_stdio.c:64)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511==  Address 0x5634780 is 8 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid write of size 4
+==6511==    at 0x4E3CC67: so_fopen (so_stdio.c:65)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511==  Address 0x5634784 is 12 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 8
+==6511==    at 0x4E3CDAE: so_fputc (so_stdio.c:113)
+==6511==    by 0x4E3CE5E: so_fwrite (so_stdio.c:132)
+==6511==    by 0x109145: main (test_fflush.c:62)
+==6511==  Address 0x5634778 is 0 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 4
+==6511==    at 0x4E3CDB6: so_fputc (so_stdio.c:113)
+==6511==    by 0x4E3CE5E: so_fwrite (so_stdio.c:132)
+==6511==    by 0x109145: main (test_fflush.c:62)
+==6511==  Address 0x5634780 is 8 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 4
+==6511==    at 0x4E3CDC7: so_fputc (so_stdio.c:114)
+==6511==    by 0x4E3CE5E: so_fwrite (so_stdio.c:132)
+==6511==    by 0x109145: main (test_fflush.c:62)
+==6511==  Address 0x5634780 is 8 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid write of size 4
+==6511==    at 0x4E3CDD1: so_fputc (so_stdio.c:114)
+==6511==    by 0x4E3CE5E: so_fwrite (so_stdio.c:132)
+==6511==    by 0x109145: main (test_fflush.c:62)
+==6511==  Address 0x5634780 is 8 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 4
+==6511==    at 0x4E3CDDE: so_fputc (so_stdio.c:116)
+==6511==    by 0x4E3CE5E: so_fwrite (so_stdio.c:132)
+==6511==    by 0x109145: main (test_fflush.c:62)
+==6511==  Address 0x5634780 is 8 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 4
+==6511==    at 0x4E3CCED: so_fflush (so_stdio.c:89)
+==6511==    by 0x109196: main (test_fflush.c:67)
+==6511==  Address 0x5634780 is 8 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 8
+==6511==    at 0x4E3CCF7: so_fflush (so_stdio.c:89)
+==6511==    by 0x109196: main (test_fflush.c:67)
+==6511==  Address 0x5634778 is 0 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 8
+==6511==    at 0x4E3CD14: so_fflush (so_stdio.c:91)
+==6511==    by 0x109196: main (test_fflush.c:67)
+==6511==  Address 0x5634778 is 0 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid write of size 4
+==6511==    at 0x4E3CD2E: so_fflush (so_stdio.c:92)
+==6511==    by 0x109196: main (test_fflush.c:67)
+==6511==  Address 0x5634780 is 8 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid write of size 4
+==6511==    at 0x4E3CD39: so_fflush (so_stdio.c:93)
+==6511==    by 0x109196: main (test_fflush.c:67)
+==6511==  Address 0x5634784 is 12 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 4
+==6511==    at 0x4E3CCED: so_fflush (so_stdio.c:89)
+==6511==    by 0x4E3CC94: so_fclose (so_stdio.c:73)
+==6511==    by 0x109265: main (test_fflush.c:76)
+==6511==  Address 0x5634780 is 8 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 8
+==6511==    at 0x4E3CCF7: so_fflush (so_stdio.c:89)
+==6511==    by 0x4E3CC94: so_fclose (so_stdio.c:73)
+==6511==    by 0x109265: main (test_fflush.c:76)
+==6511==  Address 0x5634778 is 0 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 8
+==6511==    at 0x4E3CD14: so_fflush (so_stdio.c:91)
+==6511==    by 0x4E3CC94: so_fclose (so_stdio.c:73)
+==6511==    by 0x109265: main (test_fflush.c:76)
+==6511==  Address 0x5634778 is 0 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid write of size 4
+==6511==    at 0x4E3CD2E: so_fflush (so_stdio.c:92)
+==6511==    by 0x4E3CC94: so_fclose (so_stdio.c:73)
+==6511==    by 0x109265: main (test_fflush.c:76)
+==6511==  Address 0x5634780 is 8 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid write of size 4
+==6511==    at 0x4E3CD39: so_fflush (so_stdio.c:93)
+==6511==    by 0x4E3CC94: so_fclose (so_stdio.c:73)
+==6511==    by 0x109265: main (test_fflush.c:76)
+==6511==  Address 0x5634784 is 12 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== Invalid read of size 8
+==6511==    at 0x4E3CCA9: so_fclose (so_stdio.c:76)
+==6511==    by 0x109265: main (test_fflush.c:76)
+==6511==  Address 0x5634778 is 0 bytes after a block of size 8 alloc'd
+==6511==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==6511==    by 0x4E3CC15: so_fopen (so_stdio.c:56)
+==6511==    by 0x1090C8: main (test_fflush.c:55)
+==6511== 
+==6511== 
+==6511== HEAP SUMMARY:
+==6511==     in use at exit: 0 bytes in 0 blocks
+==6511==   total heap usage: 8 allocs, 8 frees, 12,432 bytes allocated
+==6511== 
+==6511== All heap blocks were freed -- no leaks are possible
+==6511== 
+==6511== For counts of detected and suppressed errors, rerun with: -v
+==6511== ERROR SUMMARY: 14350 errors from 20 contexts (suppressed: 0 from 0)
