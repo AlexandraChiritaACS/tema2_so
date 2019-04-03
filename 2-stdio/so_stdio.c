@@ -3,13 +3,10 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdio.h>
-#include <sys/wait.h>
-
 #include "so_stdio.h"
-
+#include <sys/wait.h>
 #define BUFSIZE 4096
 #define EOF (-1)
-
 struct _so_file {
 	int fd;
 	char *buf;
@@ -234,79 +231,4 @@ int so_fseek(SO_FILE *stream, long offset, int whence)
 long so_ftell(SO_FILE *stream)
 {
 	return stream->bytesRead + stream->crpoz;
-}
-
-
-SO_FILE *so_popen(const char *command, const char *type)
-{
-	int fd[2];
-	int childpid = -1;
-
-	pipe(fd);
-
-	SO_FILE *file = (SO_FILE *)malloc(sizeof(SO_FILE));
-
-	file->buf = (char *)malloc(sizeof(char) * BUFSIZE);
-	childpid = fork();
-	if (childpid == -1) {
-		free(file->buf);
-		free(file);
-		return NULL;
-	}
-
-	if (childpid == 0) {
-		if (strchr(type, 'r')) {
-			if (fd[1] != STDOUT_FILENO) {
-				dup2(fd[1], STDOUT_FILENO);
-				close(fd[1]);
-				fd[1] = STDOUT_FILENO;
-			}
-			close(fd[0]);
-		} else if (strchr(type, 'w')) {
-			if (fd[0] != STDIN_FILENO) {
-				dup2(fd[0], STDIN_FILENO);
-				close(fd[0]);
-			}
-			close(fd[1]);
-		}
-
-		execlp("/bin/sh", "sh", "-c", command, NULL);
-		return NULL;
-	}
-
-	/* in parent proc */
-	int file_descriptor;
-
-	if (strchr(type, 'r')) {
-		file_descriptor = fd[0];
-		close(fd[1]);
-	}
-
-	if (strchr(type, 'w')) {
-		file_descriptor = fd[1];
-		close(fd[0]);
-	}
-
-	memset(file->buf, 0, BUFSIZE);
-	file->crpoz = 0;
-	file->crbufsize = BUFSIZE;
-	file->fd = file_descriptor;
-	file->ferrorFlag = 0;
-	file->bytesRead = 0;
-	file->lastOp = 0;
-	file->pid = childpid;
-	return file;
-}
-int so_pclose(SO_FILE *stream)
-{
-	int pid = -1, pstat = -1;
-	int waitedPid = stream->pid;
-	so_fclose(stream);
-
-	pid = waitpid(waitedPid, &pstat, 0);
-
-	if (pid == -1)
-		return -1;
-
-	return pstat;
 }

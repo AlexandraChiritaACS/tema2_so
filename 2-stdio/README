@@ -1,0 +1,34 @@
+Nume: Razvan Radoi
+Grupa: 331CA
+
+Tema 2
+
+Organizare:
+
+	Functiile au fost implementate in so_stdio.c.
+	
+	SO_FILE contine file descriptor, buffer si inca cativa membri ajutatori de tip flag.
+
+Implementare:
+
+	Toate functiile folosesc doar syscalls pentru a implementa specificatiile dorite.
+	Comportamentul acestora este pe cat se poate de apropiat de functiile reale, am incercat sa fac asta cel putin :)
+
+		
+
+	Functionalitati extra:
+		Nu exita functionalitati extra.
+	Functionalitati lipsa:
+		Nu am implementat popen, pclose. M-am apucat tarziu de tema si am avut un sprint greut la munca, sorry, imi dau seama ca task-urile erau interesante.
+	LATER EDIT:
+	Le-am implementat in seara de dinainte de deadline, dar se pare ca am un mic bug (feature?), testele ruleaza de doua ori.
+	-0.1 testele ruleaza de doua ori? :)
+
+	Dificultati:
+		Nu am avut foarte multe, tema e foarte faina.
+
+Bibliografie:
+	http://www.cplusplus.com/reference/cstdio/
+
+Git:
+	https://github.com/RazvanRa2/tema2_so/
